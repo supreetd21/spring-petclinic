@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Static Analysis') {
+      steps {
+        withSonarQubeEnv(installationName: 'SonarQube', credentialsId: 'Sonar-Integration')
+      }
+    }
+
   }
 }
