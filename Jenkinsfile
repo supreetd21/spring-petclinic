@@ -9,7 +9,7 @@ pipeline {
 
     stage('Ansible') {
       steps {
-        sh 'ansible-playbook /home/vagrant/task.yaml'
+        sh 'ansible-playbook /home/vagrant/task.yaml --key-file /home/vagrant/.ssh/id_rsa'
       }
     }
 
