@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Ansible') {
+      steps {
+        sh 'ansible-playbook /home/vagrant/task.yaml'
+      }
+    }
+
   }
 }
